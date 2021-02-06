@@ -1,0 +1,67 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Add Student</title>
+	<meta charset="utf-8">
+  	<meta name="viewport" content="width=device-width, initial-scale=1">
+  	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body>
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+  <!--Brand/logo -->
+  <a class="navbar-brand" href="hash">crud operations</a>
+  <!-- Links -->
+  <ul class="navbar-nav">
+    <li class="nav-item">
+      <a class="nav-link" href="#">Link 1</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">Link 2</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">Link 3</a>
+    </li>
+  </ul>
+</nav>
+<br>
+
+<div class="container card col-md-6 mt-3 shadow-lg border-success">
+  <h3 class="text-center">Register</h3>
+  <form method="POST">
+    {% csrf_token %}
+
+      <input type="text" name = "fname"
+      placeholder="Enter your fname"
+      class="form-control">
+      <input type="text" name = "lname"
+      placeholder="Enter your lname"
+      class="form-control mt-2">
+      <input type="text" name = "username"
+      placeholder="Enter your username"
+      class="form-control mt-2">
+      <input type="text" name = "rollno"
+      placeholder="Enter your roll number"
+      class="form-control mt-2">
+      <input type="Email" name = "Email"
+      placeholder="Enter your Email"
+      class="form-control mt-2">
+      <input type="number" name = "mobile"
+      placeholder="Enter your mobile number"
+      class="form-control mt-2">
+      <div class="form-group mt-2">
+        <label>
+          <input type="radio" name="gender" value="Female">Female</label>
+        <label>
+          <input type="radio" name="gender" value="male">Male</label>
+        <label><input type="radio" name="gender" value="male">others</label>
+      </div>
+        <input type="number" name="age" placeholder="enter age" class="form-control mt-2">
+        <input type="submit" name="submit" value="register" class="btn btn-info mt-2 form-control"></form>
+      </div>
+
+</body>
+</html>
